@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'MLOps Training',
-  description: 'Hands-on training for MLOps infrastructure, deployment, and CI/CD',
+  title: 'ML with PyTorch',
+  description: 'Hands-on PyTorch training for deep learning and neural networks',
 
   // Clean URLs (no .html extension)
   cleanUrls: true,
@@ -16,6 +16,8 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Study Guide', link: '/README' },
       { text: 'Module 1', link: '/module-01/README' },
+      { text: 'Module 2', link: '/module-02/README' },
+      { text: 'Module 3', link: '/module-03/README' },
     ],
 
     // Sidebar configuration
@@ -28,55 +30,43 @@ export default defineConfig({
           ]
         },
         {
-          text: 'Module 1: Infrastructure & Prerequisites',
+          text: 'Module 1: PyTorch Fundamentals',
           collapsed: false,
           items: [
             { text: 'Module Overview', link: '/module-01/README' },
-            {
-              text: 'AWS Cloud Services',
-              collapsed: false,
-              items: [
-                { text: 'AWS Overview', link: '/module-01/aws/README' },
-                { text: 'Cloud Concepts (Domain 1)', link: '/module-01/aws/cloud-concepts' },
-                { text: 'Security & Compliance (Domain 2)', link: '/module-01/aws/security-compliance' },
-                { text: 'Deployment Methods', link: '/module-01/aws/deployment-methods' },
-                { text: 'Compute Services', link: '/module-01/aws/compute-services' },
-                { text: 'Storage Services', link: '/module-01/aws/storage-services' },
-                { text: 'Database Services', link: '/module-01/aws/database-services' },
-                { text: 'Networking Services', link: '/module-01/aws/networking-services' },
-                { text: 'Analytics Services', link: '/module-01/aws/analytics-services' },
-                { text: 'AI/ML Services', link: '/module-01/aws/ai-ml-services' },
-                { text: 'Billing & Pricing (Domain 4)', link: '/module-01/aws/billing-pricing' },
-                {
-                  text: 'LocalStack Labs',
-                  collapsed: true,
-                  items: [
-                    { text: 'Quick Start', link: '/module-01/aws/localstack/quick-start' },
-                    { text: 'Full Guide', link: '/module-01/aws/localstack/guide' },
-                    { text: 'Compute Practice', link: '/module-01/aws/localstack/compute' },
-                    { text: 'Storage & Database Practice', link: '/module-01/aws/localstack/storage-database' },
-                    { text: 'Networking & Analytics Practice', link: '/module-01/aws/localstack/networking-analytics-security' }
-                  ]
-                }
-              ]
-            },
-            {
-              text: 'Terraform',
-              collapsed: true,
-              items: [
-                { text: 'Terraform Basics', link: '/module-01/terraform/basics' },
-                { text: 'Terraform Examples', link: '/module-01/terraform/examples' },
-                { text: 'Terraform Exercises', link: '/module-01/terraform/exercises' }
-              ]
-            }
+            { text: 'Tensor Basics', link: '/module-01/tensor-basics' },
+            { text: 'Tensor Operations', link: '/module-01/tensor-operations' },
+            { text: 'Tensor Manipulation', link: '/module-01/tensor-manipulation' },
           ]
-        }
+        },
+        {
+          text: 'Module 2: PyTorch Workflow Fundamentals',
+          collapsed: true,
+          items: [
+            { text: 'Module Overview', link: '/module-02/README' },
+            { text: 'Data Preparation', link: '/module-02/data-preparation' },
+            { text: 'Building Models', link: '/module-02/building-models' },
+            { text: 'Training Loop', link: '/module-02/training-loop' },
+            { text: 'Model Persistence', link: '/module-02/model-persistence' },
+          ]
+        },
+        {
+          text: 'Module 3: Neural Network Classification',
+          collapsed: true,
+          items: [
+            { text: 'Module Overview', link: '/module-03/README' },
+            { text: 'Classification Basics', link: '/module-03/classification-basics' },
+            { text: 'Architecture Design', link: '/module-03/architecture-design' },
+            { text: 'Training & Evaluation', link: '/module-03/training-evaluation' },
+            { text: 'Model Deployment', link: '/module-03/model-deployment' },
+          ]
+        },
       ]
     },
 
     // Social links
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/yourusername/mlops-training' }
+      { icon: 'github', link: 'https://github.com/yourusername/ml-pytorch-training' }
     ],
 
     // Footer
@@ -87,7 +77,7 @@ export default defineConfig({
 
     // Edit link
     editLink: {
-      pattern: 'https://github.com/yourusername/mlops-training/edit/main/docs/:path',
+      pattern: 'https://github.com/yourusername/ml-pytorch-training/edit/main/docs/:path',
       text: 'Edit this page on GitHub'
     },
 
