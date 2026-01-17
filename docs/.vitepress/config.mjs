@@ -30,13 +30,28 @@ export default defineConfig({
           ]
         },
         {
-          text: 'Module 1: PyTorch Fundamentals',
+          text: 'Module 1: Deep Learning Foundations',
           collapsed: false,
           items: [
             { text: 'Module Overview', link: '/module-01/README' },
-            { text: 'Tensor Basics', link: '/module-01/tensor-basics' },
-            { text: 'Tensor Operations', link: '/module-01/tensor-operations' },
-            { text: 'Tensor Manipulation', link: '/module-01/tensor-manipulation' },
+            {
+              text: 'Part 1: Conceptual Foundation',
+              items: [
+                { text: 'Introduction to DL', link: '/module-01/01-introduction-to-deep-learning' },
+                { text: 'Neural Network Anatomy', link: '/module-01/02-neural-network-anatomy' },
+                { text: 'Learning Methodology', link: '/module-01/03-learning-methodology' },
+              ]
+            },
+            {
+              text: 'Part 2: PyTorch Essentials',
+              items: [
+                { text: 'PyTorch Essentials', link: '/module-01/04-pytorch-essentials' },
+                { text: 'Tensor Foundations', link: '/module-01/05-tensor-foundations' },
+                { text: 'Tensor Operations', link: '/module-01/06-tensor-operations' },
+                { text: 'Tensor Manipulation', link: '/module-01/07-tensor-manipulation' },
+                { text: 'Exercises', link: '/module-01/exercises' },
+              ]
+            },
           ]
         },
         {

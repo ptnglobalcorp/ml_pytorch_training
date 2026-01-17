@@ -7,6 +7,9 @@ This exercise covers:
 - Matrix operations
 - Reduction operations
 - Comparison operations
+
+PyTorch 2.0 Note: All operations in this file are compatible with PyTorch 2.0.
+The @ operator for matrix multiplication is recommended for both PyTorch 1.x and 2.0.
 """
 
 import torch

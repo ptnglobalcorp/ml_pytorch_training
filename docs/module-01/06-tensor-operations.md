@@ -1,5 +1,7 @@
 # Tensor Operations
 
+> **PyTorch 2.0 Note:** All operations in this section are fully compatible with PyTorch 2.0. The `@` operator for matrix multiplication is recommended for both PyTorch 1.x and 2.0. In later modules, you'll learn about `torch.compile()` which can significantly speed up these operations.
+
 ## Learning Objectives
 
 By the end of this lesson, you will be able to:

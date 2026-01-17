@@ -16,23 +16,42 @@ This documentation follows a **hybrid structure**:
 
 ---
 
-## Module 1: PyTorch Fundamentals
+## Module 1: Deep Learning Foundations with PyTorch
 
-**Goal**: Master PyTorch tensors, operations, and fundamental tensor manipulation
+**Goal**: Build conceptual understanding of deep learning and master PyTorch tensor fundamentals
 
 ### Study Path
 
+**Part 1: Conceptual Foundation**
+
 | Order | Topic | Description | Lab Location |
 |-------|-------|-------------|--------------|
-| 1 | Introduction to Tensors | What are tensors, tensor creation, and basic properties | [`module-01/pytorch-fundamentals/`](../module-01/pytorch-fundamentals/) |
-| 2 | Tensor Operations | Mathematical operations, indexing, and slicing | [`module-01/pytorch-fundamentals/`](../module-01/pytorch-fundamentals/) |
-| 3 | Tensor Manipulation | Reshaping, broadcasting, and device handling | [`module-01/pytorch-fundamentals/`](../module-01/pytorch-fundamentals/) |
+| 1 | Introduction to Deep Learning | The paradigm shift, when to use DL, when to avoid it | N/A (Conceptual) |
+| 2 | Neural Network Anatomy | Key components and the foundational workflow | N/A (Conceptual) |
+| 3 | Learning Methodology | Strategies for effective deep learning study | N/A (Conceptual) |
+
+**Part 2: PyTorch Technical Essentials**
+
+| Order | Topic | Description | Lab Location |
+|-------|-------|-------------|--------------|
+| 4 | PyTorch Essentials | What is PyTorch, setup, 2.0 features | [`module-01/pytorch-fundamentals/`](../module-01/pytorch-fundamentals/) |
+| 5 | Tensor Foundations | Creation, critical attributes (shape, rank, device) | [`module-01/pytorch-fundamentals/`](../module-01/pytorch-fundamentals/) |
+| 6 | Tensor Operations | Math operations, matrix multiplication, aggregation | [`module-01/pytorch-fundamentals/`](../module-01/pytorch-fundamentals/) |
+| 7 | Tensor Manipulation | Reshaping, indexing, device management | [`module-01/pytorch-fundamentals/`](../module-01/pytorch-fundamentals/) |
 
 ### Module 1 Documentation
 
-- [Tensor Basics](module-01/tensor-basics.md)
-- [Tensor Operations Guide](module-01/tensor-operations.md)
-- [Tensor Manipulation](module-01/tensor-manipulation.md)
+**Part 1: Conceptual Foundation**
+- [Introduction to Deep Learning](module-01/01-introduction-to-deep-learning.md)
+- [Neural Network Anatomy](module-01/02-neural-network-anatomy.md)
+- [Learning Methodology](module-01/03-learning-methodology.md)
+
+**Part 2: PyTorch Technical Essentials**
+- [PyTorch Essentials](module-01/04-pytorch-essentials.md)
+- [Tensor Foundations](module-01/05-tensor-foundations.md)
+- [Tensor Operations](module-01/06-tensor-operations.md)
+- [Tensor Manipulation](module-01/07-tensor-manipulation.md)
+- [Exercises Quick Reference](module-01/exercises.md)
 
 ---
 
@@ -146,8 +165,12 @@ python 02_tensor_operations.py
 
 Track your progress by checking off completed modules:
 
-### Module 1: PyTorch Fundamentals
-- [ ] Introduction to Tensors
+### Module 1: Deep Learning Foundations
+- [ ] Introduction to Deep Learning
+- [ ] Neural Network Anatomy
+- [ ] Learning Methodology
+- [ ] PyTorch Essentials
+- [ ] Tensor Foundations
 - [ ] Tensor Operations
 - [ ] Tensor Manipulation
 

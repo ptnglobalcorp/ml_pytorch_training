@@ -6,6 +6,9 @@ This exercise covers:
 - Creating tensors from different sources
 - Understanding tensor attributes
 - Creating tensors with specific values
+
+PyTorch 2.0 Note: All code in this file is compatible with PyTorch 2.0.
+See Exercise 5 for PyTorch 2.0 device management patterns.
 """
 
 import torch
@@ -171,6 +174,23 @@ print("\nExercise 4: Create 3D tensor (2, 3, 4) of ones")
 # Exercise 5: Check if a GPU is available and create a tensor on it if possible
 print("\nExercise 5: Create tensor on GPU if available")
 # Your code here
+
+# PyTorch 2.0+ Example: Using torch.set_default_device()
+# This is available in PyTorch 2.0+ for cleaner device management
+if torch.cuda.is_available():
+    print("\nPyTorch 2.0+ Device Management Example:")
+
+    # Set CUDA as the default device
+    torch.set_default_device('cuda')
+
+    # All subsequent tensors are created on CUDA by default
+    x_auto = torch.randn(2, 3)
+    print(f"Auto-created on device: {x_auto.device}")
+
+    # Reset to CPU
+    torch.set_default_device('cpu')
+    y_auto = torch.randn(2, 3)
+    print(f"Reset to CPU device: {y_auto.device}")
 
 
 print("\n" + "=" * 60)

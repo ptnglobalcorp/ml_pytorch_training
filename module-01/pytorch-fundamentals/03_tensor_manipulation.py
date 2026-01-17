@@ -8,6 +8,9 @@ This exercise covers:
 - Transposing and permuting
 - Squeezing and unsqueezing
 - Concatenating and splitting tensors
+
+PyTorch 2.0 Note: All manipulation operations are compatible with PyTorch 2.0.
+See the device management section for torch.set_default_device() (PyTorch 2.0+ feature).
 """
 
 import torch

@@ -1,5 +1,7 @@
 # Tensor Manipulation
 
+> **PyTorch 2.0 Note:** All tensor manipulation operations are fully compatible with PyTorch 2.0. PyTorch 2.0 introduces `torch.set_default_device()` for improved device management (see Device Management section).
+
 ## Learning Objectives
 
 By the end of this lesson, you will be able to:
@@ -277,6 +279,32 @@ def ensure_same_device(*tensors):
 x, y = ensure_same_device(x, y)
 result = x + y
 ```
+
+### PyTorch 2.0+ Device Management
+
+```python
+# PyTorch 2.0+: Set default device for cleaner code
+if torch.cuda.is_available():
+    # Set CUDA as the default device
+    torch.set_default_device('cuda')
+
+    # All subsequent tensors are created on CUDA by default
+    x = torch.randn(3, 4)  # Automatically on GPU!
+    y = torch.randn(3, 4)  # Automatically on GPU!
+
+    print(f"x device: {x.device}")  # cuda:0
+    print(f"y device: {y.device}")  # cuda:0
+
+    # No need for explicit .to('cuda') calls
+    result = x + y  # Works automatically
+
+    # Reset to CPU if needed
+    torch.set_default_device('cpu')
+    z = torch.randn(2, 3)
+    print(f"z device: {z.device}")  # cpu
+```
+
+> **Note:** `torch.set_default_device()` is available in PyTorch 2.0+. For earlier versions, use explicit `.to(device)` calls as shown in the examples above.
 
 ## Practical Examples
 
