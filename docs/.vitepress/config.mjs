@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import mathjax3 from 'markdown-it-mathjax3'
 
 export default defineConfig({
   title: 'ML with PyTorch',
@@ -56,13 +57,25 @@ export default defineConfig({
         },
         {
           text: 'Module 2: PyTorch Workflow Fundamentals',
-          collapsed: true,
+          collapsed: false,
           items: [
             { text: 'Module Overview', link: '/module-02/README' },
-            { text: 'Data Preparation', link: '/module-02/data-preparation' },
-            { text: 'Building Models', link: '/module-02/building-models' },
-            { text: 'Training Loop', link: '/module-02/training-loop' },
-            { text: 'Model Persistence', link: '/module-02/model-persistence' },
+            {
+              text: 'Part 1: The Workflow',
+              items: [
+                { text: 'Introduction & Setup', link: '/module-02/01-introduction-setup' },
+                { text: 'Data Preparation', link: '/module-02/02-data-preparation' },
+                { text: 'Building Models', link: '/module-02/03-building-models' }
+              ]
+            },
+            {
+              text: 'Part 2: Training & Deployment',
+              items: [
+                { text: 'Training Loop', link: '/module-02/04-training-loop' },
+                { text: 'Saving & Loading', link: '/module-02/05-saving-loading' },
+                { text: 'Exercises', link: '/module-02/exercises' }
+              ]
+            }
           ]
         },
         {
@@ -115,10 +128,10 @@ export default defineConfig({
   markdown: {
     // Line numbers in code blocks
     lineNumbers: true,
+    math: true,
 
     // Language display
     config: (md) => {
-      // Add custom markdown-it plugins if needed
       return md
     }
   },
