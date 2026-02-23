@@ -159,21 +159,35 @@ print("=" * 60)
 print("\nExercise 1: Create a 4x4 tensor filled with 3.14")
 # Your code here
 
+tensor_ex1 = torch.full((4, 4), 3.14)
+print(tensor_ex1)
+
 # Exercise 2: Create a random tensor of shape (5, 5) with values between 0 and 1
 print("\nExercise 2: Create random 5x5 tensor [0, 1)")
 # Your code here
+
+tensor_ex2 = torch.rand(5, 5)
+print(tensor_ex2)
 
 # Exercise 3: Create a tensor with values from 10 to 50 (exclusive) with step 5
 print("\nExercise 3: Range from 10 to 50 with step 5")
 # Your code here
 
+tensor_ex3 = torch.linspace(10, 50, steps=5)
+
 # Exercise 4: Create a 3D tensor of shape (2, 3, 4) filled with ones
 print("\nExercise 4: Create 3D tensor (2, 3, 4) of ones")
 # Your code here
 
+tensor_ex4 = torch.ones(2, 3, 4)
+
 # Exercise 5: Check if a GPU is available and create a tensor on it if possible
 print("\nExercise 5: Create tensor on GPU if available")
 # Your code here
+
+if torch.cuda.is_available():
+    tensor_ex5 = torch.randn(2, 3).to('cuda')
+    print(f"Tensor created on device: {tensor_ex5.device}")
 
 # PyTorch 2.0+ Example: Using torch.set_default_device()
 # This is available in PyTorch 2.0+ for cleaner device management

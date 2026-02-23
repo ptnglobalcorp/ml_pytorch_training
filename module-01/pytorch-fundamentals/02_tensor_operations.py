@@ -180,20 +180,36 @@ A = torch.randn(4, 3)
 B = torch.randn(3, 5)
 # Compute C = A @ B
 
+C = A @ B
+print(f"Result C shape: {C.shape}")
+
 # Exercise 2: Normalize a tensor to have zero mean and unit variance
 print("\nExercise 2: Normalize tensor")
 tensor = torch.randn(100, 10)
 # Normalize: (x - mean) / std
+
+mean = torch.mean(tensor)
+std = torch.std(tensor)
+norm_tensor = (tensor - mean) / std
+print(f"Normalized tensor mean: {torch.mean(norm_tensor):.4f}, std: {torch.std(norm_tensor):.4f}")
 
 # Exercise 3: Find the indices of the top 3 values in a tensor
 print("\nExercise 3: Find top 3 indices")
 tensor = torch.randn(10)
 # Find indices of top 3 values
 
+tensor_top3 = torch.topk(tensor, 3)
+print(f"Top 3 values: {tensor_top3.values}")
+
 # Exercise 4: Implement softmax function
 print("\nExercise 4: Implement softmax")
 logits = torch.randn(2, 5)  # Batch of 2, 5 classes
 # Implement: softmax(x) = exp(x) / sum(exp(x))
+
+exp_logits = torch.exp(logits)
+sum_exp = torch.sum(exp_logits, dim=1, keepdim=True) 
+softmax = exp_logits / sum_exp
+print(f"Softmax result:\n{softmax}")
 
 # Exercise 5: Compute cosine similarity between two vectors
 print("\nExercise 5: Cosine similarity")
@@ -201,6 +217,8 @@ v1 = torch.randn(100)
 v2 = torch.randn(100)
 # Compute cosine similarity: (v1 . v2) / (||v1|| * ||v2||)
 
+cos_sim = torch.dot(v1, v2) / (torch.norm(v1) * torch.norm(v2))
+print(f"Cosine similarity: {cos_sim:.4f}")  
 
 print("\n" + "=" * 60)
 print("Exercise 2 Complete!")

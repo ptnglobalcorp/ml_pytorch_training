@@ -188,26 +188,40 @@ print("\nExercise 1: Remove singleton dimension")
 x = torch.randn(64, 1, 28, 28)
 # Your code here
 
+squeezed_ex1 = x.squeeze(dim=1)
+print(f"New shape: {squeezed_ex1.shape}")
+
 # Exercise 2: Add a batch dimension to a single image tensor of shape (3, 224, 224)
 print("\nExercise 2: Add batch dimension")
 image = torch.randn(3, 224, 224)
 # Your code here - should result in (1, 3, 224, 224)
+
+batched_image = image.unsqueeze(dim=0)
+print(f"New shape: {batched_image.shape}")
 
 # Exercise 3: Convert HWC format to CHW format
 print("\nExercise 3: HWC to CHW conversion")
 hwc_image = torch.randn(224, 224, 3)
 # Your code here - should result in (3, 224, 224)
 
+chw_image = hwc_image.permute(2, 0, 1)
+print(f"New shape: {chw_image.shape}")
+
 # Exercise 4: Extract the diagonal elements from a square matrix
 print("\nExercise 4: Extract diagonal")
 matrix = torch.randn(5, 5)
 # Your code here
+
+diagonal = torch.diagonal(matrix)
+print(f"Diagonal elements: {diagonal}")
 
 # Exercise 5: Create a batch of 10 random images and stack them
 print("\nExercise 5: Stack images into batch")
 images = [torch.randn(3, 224, 224) for _ in range(10)]
 # Your code here - should result in (10, 3, 224, 224)
 
+batch_images = torch.stack(images, dim=0)
+print(f"Batch shape: {batch_images.shape}")
 
 print("\n" + "=" * 60)
 print("Exercise 3 Complete!")
