@@ -29,8 +29,8 @@ print("Part 1: Creating Synthetic Data")
 print("=" * 60)
 
 # TODO: Define known parameters
-weight = 0.7
-bias = 0.3
+weight = 1.5
+bias = 0.5
 
 # TODO: Create input data
 start = 0
@@ -80,8 +80,8 @@ print("Part 3: Splitting the Data")
 print("=" * 60)
 
 # TODO: Calculate split points
-train_split = int(0.7 * len(X))
-val_split = int(0.85 * len(X))
+train_split = int(0.8 * len(X))
+val_split = int(0.9 * len(X))
 
 print(f"Total samples: {len(X)}")
 print(f"Train split index: {train_split}")
@@ -178,8 +178,11 @@ print("Tip: y = 0.5 * X**2 + 0.3 * X + 0.1")
 print("\nExercise 5: Data exploration")
 print("Answer these questions:")
 print("  - What happens if X is not sorted?")
+print("-> It may affect visualization but not the model training if shuffled properly.")
 print("  - What happens with very few data points (e.g., step=0.1)?")
+print("-> The model may underfit due to lack of data.")
 print("  - What happens with many data points (e.g., step=0.01)?")
+print("-> The model may perform better but training time increases.")
 print("Tip: Modify the 'step' variable and observe the changes")
 
 print("\n" + "=" * 60)

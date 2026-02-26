@@ -166,7 +166,6 @@ print("Tip: Modify the nn.Parameter initialization in __init__")
 # Exercise 2: Multiple input features
 print("\nExercise 2: Multiple input features")
 
-
 class MultiFeatureLinearRegression(nn.Module):
     def __init__(self, input_size):
         super().__init__()
@@ -183,8 +182,6 @@ print("Tip: Use nn.Linear(input_size, 1) for multiple features")
 
 # Exercise 3: Add activation function
 print("\nExercise 3: Add non-linearity")
-
-
 class NonLinearModel(nn.Module):
     def __init__(self):
         super().__init__()
